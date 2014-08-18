@@ -89,18 +89,9 @@ $(document).ready(function() {
       var time = moment(event.datetime).utc().format('hh:mm a')
       for(var i=1; i<=31; i++){
         if(date == i){
+          console.log(date);
           var numI = i.toString();
-          var icon = "<span class=\"mic\"" + "title=\"band info\">" + "<img style=\"width:18px;\"" + "src=\"images/micIcon.png\"" + "alt=\"mic\"" + ">"
-                    + "<span class=\"drop hidden\"" + "style=\"width:50px; font-size: 10px; padding: 5px;\">" + band + " at " + venue + " " + time + "</span>"
-                    + "</span>";
-          $(".calendar #" + numI).append(icon);
-          $(".calendar .mic").on("mouseenter", function(event){
-            $(".drop").removeClass("hidden");
-            $(".drop").closest('td').siblings().children().closest(".mic").addClass("hidden");
-          });
-          $(".calendar .mic").on("mouseleave", this, function(event){
-            $(".drop").addClass("hidden");
-          });
+          $(".calendar #" + numI).append(" " + band + " at " + venue + " " + time + " ");
         }
       }
     });
@@ -118,8 +109,6 @@ $(document).ready(function() {
 
     }
     });
-
-
 
 home.init();
 

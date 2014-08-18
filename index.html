@@ -6,6 +6,7 @@
   <link href='http://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
   <title>Stage</title>
 
+
 <script type="template/html" id="eventSideTmpl">
   <% _.each(event_data, function (element,index,list){ %>
     <% if(moment(element.datetime).utc().format().substring(0,10) == moment.utc().format().substring(0,10)) { %>
@@ -18,6 +19,7 @@
     <% } %>
 <% }); %>
 </script>
+
 <script type="template/html" id="eventDateTmpl">
  <% _.each(event_data, function (element,index,list){ %>
   <div data-index="<%= index %>" class="event_container">
@@ -106,7 +108,21 @@
   </header>
 
   <div class="container">
+
+
+    <input type="button" value="Show Location"
+    onclick="javascript:showlocation()" />   <br/>
+
+Latitude: <span id="latitude"></span>       <br/>
+
+Longitude: <span id="longitude"></span>
+
+
+
     <div class="main currentTab">
+
+
+
     <div class="Blog">
 
       <section class="blogpost">
