@@ -6,9 +6,7 @@
   <link href='http://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
   <title>Stage</title>
 
-<<<<<<< HEAD
 
-=======
 <script>
       navigator.geolocation.getCurrentPosition(function(position){
        var lat = position.coords.latitude;
@@ -17,7 +15,6 @@
        window.long = long;
      });
 </script>
->>>>>>> 9b485d1887f52aa6a80c3357da8572e0e43e0ace
 <script type="template/html" id="eventSideTmpl">
   <% _.each(event_data, function (element,index,list){ %>
     <% if(moment(element.datetime).utc().format().substring(0,10) == moment.utc().format().substring(0,10)) { %>
@@ -122,13 +119,6 @@
 
   <div class="container">
 
-
-    <input type="button" value="Show Location"
-    onclick="javascript:showlocation()" />   <br/>
-
-Latitude: <span id="latitude"></span>       <br/>
-
-Longitude: <span id="longitude"></span>
 
 
 
